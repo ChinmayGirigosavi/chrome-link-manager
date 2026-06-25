@@ -14,12 +14,14 @@ if (linksFromLocalStorage) {
 }
 
 function render() {
-    for (let i = 0; i < myLinks.length; i ++) {
-        ulEl.innerHTML += `
+    let listOfLinks = "";
+    for (let i = 0; i < myLinks.length; i += 1) {
+        listOfLinks += `
             <li>
                 <a href='${myLinks[i]}' target='_blank'> ${myLinks[i]} </a>
             </li>`;
     }
+    ulEl.innerHTML = listOfLinks
 }
 
 
